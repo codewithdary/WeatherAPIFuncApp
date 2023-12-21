@@ -1,0 +1,143 @@
+{
+	"info": {
+		"_postman_id": "fa8deb05-6695-4650-86b3-e70d5fccaa51",
+		"name": "Fetch Images Endpoint",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "11070567"
+	},
+	"item": [
+		{
+			"name": "http://localhost:7071/api/FetchWeatherData",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "testpwd",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "TestUser",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "username",
+							"value": "TestUser",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "testpwd",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:7071/api/FetchWeatherData",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "7071",
+					"path": [
+						"api",
+						"FetchWeatherData"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "https://weatherapifuncapp.azurewebsites.net/api/FetchWeatherData?code=5DDCp0yU0tdl-N73b3bKFy4CDlkYK2Hz6OHbv0aZemU4AzFuXX30Ew==",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "testpwd",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "TestUser",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "username",
+							"value": "TestUser",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "testpwd",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://weatherapifuncapp.azurewebsites.net/api/FetchWeatherData?code=5DDCp0yU0tdl-N73b3bKFy4CDlkYK2Hz6OHbv0aZemU4AzFuXX30Ew==",
+					"protocol": "https",
+					"host": [
+						"weatherapifuncapp",
+						"azurewebsites",
+						"net"
+					],
+					"path": [
+						"api",
+						"FetchWeatherData"
+					],
+					"query": [
+						{
+							"key": "code",
+							"value": "5DDCp0yU0tdl-N73b3bKFy4CDlkYK2Hz6OHbv0aZemU4AzFuXX30Ew=="
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
