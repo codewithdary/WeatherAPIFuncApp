@@ -46,9 +46,7 @@ resource hostingPlan 'Microsoft.Web/serverfarms@2022-03-01' = {
     size: 'Y1'
     family: 'Y'
   }
-  properties: {
-    computeMode: 'Dynamic'
-  }
+ 
 }
 
 resource applicationInsight 'Microsoft.Insights/components@2020-02-02' = {
@@ -108,10 +106,11 @@ resource functionApp 'Microsoft.Web/sites@2022-03-01' = {
   }
 }
 
-resource zipDeploy 'Microsoft.Web/sites/extensions@2022-03-01' = {
-  parent: functionApp
-  name: 'zipdeploy'
+resource functionAppName_ZipDeploy 'Microsoft.Web/sites/extensions@2021-02-01' = {
+  name: '${functionAppName}/ZipDeploy'
+  
   properties: {
     packageUri: packageUri
   }
 }
+
